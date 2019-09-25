@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup as BS
 import datetime
-with open('C:\\Users\\adity\\Documents\\Desktop\\Misc\\not blind\\index.html') as fp:
+with open('index.html') as fp:
     soup = BS(fp, features="html.parser")
 now = datetime.datetime.now()
 rules = '''
@@ -57,6 +57,6 @@ while True:
 
     else:
         print('Invalid command! Moving to newline!!')
-with open('C:\\Users\\adity\\Documents\\Desktop\\Misc\\not blind\\index.html','w') as outf:
+with open('index.html','w') as outf:
     outf.write((soup.prettify()))
     input('Your changes have been published! Press return to exit.')
